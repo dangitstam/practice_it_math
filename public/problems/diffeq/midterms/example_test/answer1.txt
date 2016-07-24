@@ -1,0 +1,15 @@
+
+This equation is separable. After factoring the right hand side of the DE we have it in standard form:
+$$\frac{dy}{dt} = \frac{1}{y}\cdot\frac{t}{1 + t^2}$$
+Putting all the y-stuff on the left and all the t-stuff on the right then yields
+$${y}\:{dy} = \frac{t}{1 + t^2}dt$$
+Both integrals are straightforward: on the left we get $\frac{1}{2}y^2$, and on the right (via u-sub if necessary) we get $\frac{1}{2}ln(1+t^2)+C$, we may omit absolute value signs, since $t^2 + 1$ is always positive. Hence:
+$$\frac{1}{2}y^2 = \frac{1}{2}ln(1 + t^2) + C$$
+Or, after solving for y,
+$$y = \pm \sqrt{ln(1 + t^2) + C}$$
+(where we’ve absorbed the factor of 2 into the C when multiplying through).
+
+Applying the initial condition t = 0, y = -3 give us
+$$ -3 = \pm \sqrt{ln(1 + 0^2) + C} = \pm \sqrt{C},$$
+which means that C = 9 and we must choose the negative square root. Thus the solution to the IVP is
+$$y = -\sqrt{ln(1 + t^2) + 9}$$

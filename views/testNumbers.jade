@@ -1,0 +1,21 @@
+doctype html
+html
+head
+	title test numbers
+	script(src="/javascripts/sage.js")
+	script(src="https://sagecell.sagemath.org/static/embedded_sagecell.js")
+	script(src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML")
+	body
+		form(name="test_num", method="post")
+			div
+				span t1
+				input(type="text", name="t1", value="stuff")#test_input
+			div
+				input(type="submit", value="send")#submit
+		#test_answer
+			- if (typeof(answer) !== 'undefined') {
+				p #{answer}
+			- } else {
+				p no answer sent yet
+			- }
+		button#test_request test

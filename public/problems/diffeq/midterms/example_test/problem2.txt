@@ -1,0 +1,7 @@
+2.   Consider the following linear initial value problem:
+$$(t^2 - 4t - 5)\frac{dy}{dt} + 2(t+1)y - 1 = 0,\quad y(0) = y_o$$
+     (a)  Using the existence and uniqueness theorem for linear differential equations, state 
+           the maximum interval on which a unique solution to the above IVP is 
+           guaranteed to exist (3 points).
+
+     (b)  Solve the above differential equation for the case $y_o = -\frac{1}{5}$ (7 points).

@@ -1,0 +1,4 @@
+1.   Solve the following initial value problem explicitly. Your answer should be a function 
+     in the form $y = g(t)$, where there is no undetermined constant in $g$.
+$$\frac{dy}{dt} = \frac{t}{y + {t^2}y}\:,\quad y(0) = -3$$
+

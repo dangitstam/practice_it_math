@@ -1,0 +1,13 @@
+
+First we put the linear equation in standard form by dividing through by $(t^2 - 4t - 5):$
+$$\frac{dy}{dt} + \frac{2(t + 1)}{t^2 -4t - 5}y = \frac{1}{t^2 -4t - 5}$$
+Note that $(t^2 -4t - 5) = (t + 1)(t - 5)$, so we get cancellation in the term in front of y, 
+so the above equation simplifies to:
+$$\frac{dy}{dt} + (\frac{2}{t-5})y = \frac{1}{t^2 -4t - 5}$$
+From  this  we  see  that $f(t) = (\frac{2}{t-5})$ is  continuous  on  the intervals $t < 5$ and $t > 5$, while $g(t)= \frac{1}{t^2 -4t - 5}$
+is continuous on the intervals $t < -1,-1 < t < 5$, and $t > 5.$
+
+The largest interval surrounding the initial condition time $t = 0$ on which both $f$ and $g$ are 
+continuous is thus $1 < t < 5$. Hence we are guaranteed a unique solution to the IVP for $1 < t < 5$.
+
+

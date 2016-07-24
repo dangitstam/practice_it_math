@@ -1,0 +1,1 @@
+Introductory course in ordinary differential equations. Includes first- and second-order equations and Laplace transform.

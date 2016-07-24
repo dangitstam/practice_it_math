@@ -1,0 +1,66 @@
+doctype html
+html
+head
+	title Practice-it: Math
+	link(rel="stylesheet", href="/stylesheets/mathdesign.css")
+	script(src="/javascripts/math.js")
+	script(async, src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML")
+	body
+		#contentwrapper
+			#head
+				#headBackgroundFourier $$  f(x) = \frac{1}{2} a_{0} + \sum_{n=1}^{\infty} a_{n}\cos(nx) $$
+				#headBackgroundLagrange
+					span#bn $$+ \sum_{n=0}^{\infty} b_{n}\sin(nx) $$
+				#menu #[span Courses] / #[span About us] / #[span UW Math Department]
+				#mathtitle
+					h1 PRACTICE-IT: MATH
+					h3 Practice-it makes perfect
+				#login
+					form(method="post")#loginform
+						input(type="submit", value="Log in")
+					form(method="post")#createAcc
+						input(type="submit", value="Create an account")
+				#scroll
+					p ^
+			#triangledown
+			#courseswrapper
+				#courses
+					each currShort, i in classShort
+						- var className_1 = courses[i][0].toUpperCase();
+						- var className_2 = courses[i][1].toUpperCase();;
+						- var classNumber = courses[i][2];
+						- var descibe = descriptions[i];
+						- var mid = midterms[currShort];
+						- var fin = finals[currShort];
+						div(class="#{currShort}")
+							div(class="#{currShort}")
+								h2 
+									| #{className_1}
+									br
+									| #{className_2}
+								h3 #{classNumber}
+								p.description #{descibe}
+								div.form
+									h4 Midterms
+									select(form="#{currShort}m", name="exam")
+										each m, i in mid
+											option(value="#{currShort} " + "#{m}" + " midterm") #{m}
+									form(id="#{currShort}m", method="POST", action="/problems")
+										input(value="START", type="submit")
+								div.form
+									h4 Finals
+									select(form="#{currShort}f", name="exam")
+										each f, i in fin
+											option(value="#{currShort} " + "#{f}" + " midterm") #{f}
+									form(id="#{currShort}f", method="POST", action="/problems")
+										input(value="START", type="submit")
+				#contactwrapper
+					#triangleup
+					#contact
+		#mathBackground.fadeIn.fadeInDisplay
+			- for (var i = 0; i < math_backgrounds.length; i++) {
+				- var currShort = classShort[i];
+				- var currBackground = math_backgrounds[i];
+			div(class="#{currShort}")
+				p #{currBackground}
+			- }

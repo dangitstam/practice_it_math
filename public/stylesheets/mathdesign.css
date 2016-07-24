@@ -1,0 +1,433 @@
+@font-face {
+  font-family: "CMU Serif";
+  font-style: lighter;
+  src: url("./fonts/cmunrm.otf") format("truetype");
+}
+
+body {
+	font-family: "Century Schoolbook";
+	margin: 0;
+	position: relative;
+	width: 100%;
+}
+
+#contentwrapper {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+#courseswrapper {
+	position: relative;
+	background-color: rgba(255, 255, 255, 0);
+	overflow: hidden;
+}
+
+#courseswrapper, #head, div.problemContain {
+	width: 100%;
+}
+
+#courses {
+	background: rgba(255, 255, 255, 0.0);
+	width: 60%;
+	position: relative;
+	text-align: left;
+	float: left;
+	z-index: 100;
+}
+
+#courses > div {
+	margin: 15% 0;
+	width: 90%;
+	padding-left: 10%;
+	float: left;
+	clear: both;
+}
+
+#courses div.answer h3 {
+	color: #F1F1F1;
+	margin-top: 10%;
+}
+
+#courses h2 {
+	color: #233237;
+	font-family: Georgia;
+	font-weight: normal;
+	margin: 0;
+	font-size: 35pt;
+}
+
+#mathtitle h1 {
+	color: white;
+	margin: 0;
+	font-size: 60pt;
+	font-family: Georgia;
+	font-weight: normal;
+	margin-bottom: 2%;
+}
+
+#courses > div > div {
+	width: 80%;
+	padding-left: 10%;
+}
+
+#courses h3 {
+	color: #415d66;
+	font-size: 25pt;
+}
+
+#mathtitle h3 {
+	color: rgba(100, 100, 100, 0.4);
+	font-size: 27pt;
+	font-family: Georgia;
+	font-weight: lighter;
+	margin: 0;
+	padding: 0;
+}
+
+#courses h3 {
+	font-size: 20pt;
+	margin-top: 10px;
+}
+
+#courses h4 {
+	text-align: center;
+	font-family: Georgia;
+	font-size: 24pt;
+	margin-bottom: 0;
+	font-weight: normal;
+}
+
+h1, h2, h3, h4, li {
+	color: #303030;
+/*	font-family: "Encode Sans Compressed";*/
+	font-family: "CMU serif"
+}
+
+p.description, .problemContain p, .answer {
+	color: #141414;
+	font-family: Elena, Georgia, serif;
+	font-size: 12pt;
+	font-weight: lighter;
+	line-height: 24pt;
+	margin-top: 10%;
+	width: 95%;
+}
+
+p.description {
+	width: 80%;
+}
+
+#courses div.form {
+	text-align: center;
+	display: inline-block;
+	padding: 0;
+}
+
+#contactwrapper {
+	position: absolute;
+	bottom: 0;
+	height: 400px;
+}
+
+#contact {
+	position: relative;
+	height: 250px;
+	background-color: #233237;
+}
+
+#contact h2, #contact h4 {
+	color: white;
+	font-family: Georgia;
+	font-weight: normal;
+	margin: 0;
+}
+
+#contact h2 {
+	position: absolute;
+	top: 20%;
+	left: 10%;
+	font-size: 40pt;
+}
+
+#contact h4 {
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	font-size: 20pt;
+}
+
+div.form:nth-child(even) {
+	margin-right: 22%;
+}
+
+.form {
+	width: 33%;
+	height: 20%;
+}
+
+#head h2, #head h3 {
+	margin: 0;
+}
+
+button, input[type=submit] {
+	color: white;
+	background: #233237;
+	border: none;
+	border-radius: 4px;
+	font-family: Georgia;
+	font-size: 24pt;
+	height: 60px;
+	width: 100%;
+	padding: 10px;
+	-webkit-transition: background, 0.1s;
+	-moz-transition: background, 0.1s;
+	transition: background, 0.1s;
+}
+
+#login input[type=submit] {
+	background: #415d66;
+	font-size: 16pt;
+	margin-bottom: 2%;
+	-webkit-transition: color 0.1s, background 0.1s;
+	-moz-transition: color 0.1s, background 0.1s;
+	transition: color 0.1s, background 0.1s;
+}
+
+#login input[type=submit]:hover {
+	color: #415d66;
+	background: white;
+	font-size: 16pt;
+	margin-bottom: 2%;
+}
+
+
+#login input[type=text], input[type=password] {
+	display: block;
+	float: right;
+	clear: right;
+}
+
+label {
+	font-size: 14pt;
+	font-weight: bold;
+	display: inline-block;
+	float: left;
+	clear: left;
+}
+
+#login input[type=text], input[type=password], label {
+	margin-bottom: 2%;
+}
+
+button {
+	width: auto;
+}
+
+select {
+	color: #303030;
+	margin: 40px auto;
+}
+
+#head {
+	background-color: #233237;
+	overflow: hidden;
+	position: relative;
+	height: 100vh;
+}
+
+#headBackgroundFourier, #headBackgroundLagrange {
+	position: absolute;
+	color: rgba(100, 100, 100, 0.2);
+}
+
+#headBackgroundFourier {
+	top: 3%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 40pt;
+	line-height: 10pt;
+}
+
+#headBackgroundLagrange {
+	bottom: 3%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 45pt;
+}
+
+#login {
+	color: #415d66;
+	font-weight: lighter;
+	position: absolute;
+	z-index: 100;
+	top: 60%;
+	left: 50%;
+	width: 20%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+#mathBackground {
+/*	background-color: #374e56;
+	box-shadow: inset 3px 0px 10px 2px black;*/
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	clear: right;
+	font-size: 90pt;
+	overflow: hidden;
+	margin: 0;
+	width: 47%;
+	height: 100vh;
+	z-index: -1;
+	text-align: right;
+}
+
+#mathBackground p {
+	margin: 33% 0 0 0;
+}
+
+.fadeIn {
+	color: rgba(151, 151, 151, 0.6);
+	-webkit-transition : color .3s ease-in-out;
+	-moz-transition : color .3s ease-in-out;
+	transition : color .3s ease-in-out;
+}
+
+.fadeOut {
+	color: rgba(151, 151, 151, 0.0);
+}
+
+#mathBackground > div.calc1 > p {
+	font-size: 110pt;
+}
+
+#mathBackground > div.calc2 > p{
+	font-size: 80pt;
+	transform: rotate(3deg);
+}
+
+#mathBackground div.calc3 p {
+	font-size: 100pt;
+}
+
+#mathBackground div.calc4 p {
+	font-size: 120pt;
+}
+
+#mathBackground div.diffeq p {
+	font-size: 120pt;
+}
+
+#mathBackground div.linalg p {
+	font-size: 70pt;
+}
+
+#mathBackground div p span.mjx-chtml {
+	margin: 0;
+}
+
+
+#mathtitle {
+	position: relative;
+	top: 33%;
+	text-align: center;
+}
+
+#menu {
+	color: white;
+	font-size: 20pt;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	top: 27%;
+}
+
+#menu span {
+	color: #415d66;
+	cursor: pointer;
+	-webkit-transition: color, 0.1s;
+	-moz-transition: color, 0.1s;
+	transition: color, 0.1s;
+}
+
+#menu span:hover {
+	color: white;
+}
+
+input[type=submit]:hover, button:hover {
+	background: red;
+	cursor: pointer;
+}
+
+div.problemContain {
+	margin: 0;
+	padding: 0;
+}
+
+#reveal {
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+}
+
+#scroll {
+	color: white;
+	font-size: 18pt;
+	margin: 20px;
+	z-index: 1;
+}
+
+#scroll h3 {
+	color: white;
+	font-size: 18pt;
+	margin: 20px 0;
+	padding: 0;
+}
+
+#scroll p {
+	color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	font-size: 30pt;
+	margin: 2% 0 0 0;
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	transform: translateX(-50%) rotate(180deg);
+}
+
+#headBackgroundFourier span.mjx-chtml, #headBackgroundLagrange span.mjx-chtml {
+	margin: 0;
+}
+
+#bn {
+	position: absolute;
+	font-size: 65pt;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#triangledown {
+	width: 0;
+	height: 0;
+	border-top: solid 150px #233237;
+	border-right: solid 98vw transparent;
+	z-index: 99;
+}
+
+#courses > div.linalg {
+	margin-bottom: 70%;
+}
+
+#triangleup {
+	width: 0;
+	height: 0;
+	border-bottom: solid 150px #233237;
+	border-left: solid 98vw transparent;
+	z-index: 99;
+}

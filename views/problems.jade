@@ -1,0 +1,33 @@
+doctype html
+html
+head
+	title Practice-it: Math
+	link(rel="stylesheet", href="/stylesheets/problemdesign.css")
+	script(src="/javascripts/problem.js")
+	script(async, src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML").
+		MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true }})
+	body
+		#pi
+			button#home Back to Courses
+		#heading
+			- var test_heading = test_name + " " + test_type;
+			h2 #{subject} 
+				span(id="testname") #{test_heading} 
+
+		#content
+			#menu
+				ul#selectproblem
+					- for (var i = 0; i < rows.length; i++) {
+					li(class="menu#{i}") Problem #{i + 1}
+					- }
+			#problems
+				each question, i in rows
+					- console.log(question);
+					div(class="problemContain#{i}")
+						div(class="problem#{i}") #{question["problem"]}
+						div(id="#{i}").answer
+							h3 Solution
+							p #{question["solution"]}
+						input(name="sage", type="text", maxlength="50", id="sage#{i}").sage
+						button(class="check_answer #{i}") Check Answer
+						button.reveal Reveal Solution 
