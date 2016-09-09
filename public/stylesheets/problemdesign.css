@@ -269,10 +269,12 @@ body {
 	border-right: solid 2px #909090;
 }
 
+
 #menu li {
 	float: right;
 	clear: both;
 }
+
 
 .hyphen, .selectedHyphen {
 	cursor: pointer;

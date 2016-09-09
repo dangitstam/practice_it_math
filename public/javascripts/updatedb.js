@@ -5,7 +5,7 @@ var mysql = require("mysql");
 var junk = require("junk");
 
 var connection = mysql.createConnection({
-	host     : 'localhost',
+	host     : '104.236.130.204',
 	user     : 'root',
 	password : 'rubycloudserpent',
 	database : 'math',

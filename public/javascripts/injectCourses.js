@@ -9,7 +9,7 @@ var q = require("q");
 
 // Abstract this into a file later.
 var connection = mysql.createConnection({
-	host     : 'localhost',
+	host     : '104.236.130.204',
 	user     : 'root',
 	password : 'rubycloudserpent',
 	database : 'math',
