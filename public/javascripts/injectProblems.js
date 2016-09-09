@@ -8,7 +8,7 @@ var junk = require("junk");
 var jpeg = require("jpeg-js");
 
 var connection = mysql.createConnection({
-	host     : '10.134.20.86',
+	host     : 'localhost',
 	user     : 'root',
 	password : 'rubycloudserpent',
 	database : 'math',
