@@ -1,0 +1,7 @@
+5. The graph below shows the graph of $f(x) = x^3$ and a line L going through the 
+	point $P = (0, -16)$ and some point Q on the curve.
+
+	(a) (6 points) Fine the equation of the tangent line to the graph of f(x) going through
+		the point (-2, -8).
+
+		$y = $

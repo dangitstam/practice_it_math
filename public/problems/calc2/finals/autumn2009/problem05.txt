@@ -1,0 +1,5 @@
+3. (10 total points) 
+
+A balloon is moving vertically up and down along a straight line above the ground, with the positive direction pointing up. The acceleration of the balloon at time t (in seconds) is given by $a(t) = -(t + 5) \frac{ft}{sec^2}$. The initial velocity of the balloon at time t = 0 is $v(0) = 12 \frac{ft}{sec}$.
+
+(a) (3 points) Find the velocity v(t) of the balloon as a function of time t in $\frac{ft}{sec}$.

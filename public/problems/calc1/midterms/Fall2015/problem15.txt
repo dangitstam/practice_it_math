@@ -1,0 +1,1 @@
+4. (b) (5 points) $$ g(x) = \frac{x \cdot e^x}{x + 2} $$

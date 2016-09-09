@@ -1,0 +1,1 @@
+3. (e) (3 points) $\lim_{x \to 0}\, \frac{f(x)}{x} = $

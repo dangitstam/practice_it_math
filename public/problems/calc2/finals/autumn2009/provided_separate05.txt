@@ -1,0 +1,1 @@
+12 - 5t - \frac{t^2}{2} \frac{ft}{sec}

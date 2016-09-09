@@ -1,18 +1,54 @@
 @font-face {
   font-family: "CMU Serif";
-  font-style: lighter;
   src: url("fonts/cmunrm.otf") format("truetype");
 }
 
-body {
-	scroll-behavior: smooth;
+/* answer response colors 
+
+	correct green, incorrect red,
+	your solution : purple #26004d dark #cd9bff light
+	provided : gold #ffe766 light #b29600 dark
+
+*/
+
+div.buildAnswer p.correctNess, div.buildAnswer p.soln {
+    font-family: 'Bree serif';
+    display: block;
+    clear: both;
+    text-align: left;
 }
+
+.correct {
+	color: #5c7b1e;
+	background: #d6ebad;
+}
+
+.incorrect {
+	color: #660000;
+	background: #ff7f7f;
+}
+
+.correctNess {
+	font-size: 30pt;
+	padding: 2%;
+	margin: 0 0 4% 7%;
+	float: left;
+} 
+
+
+.soln {
+	color: #004d4d;
+	font-size: 22pt;
+	margin: 5% auto;
+	width: 70%;
+	word-wrap: break-word;
+}
+
 
 button {
 	color: white;
-	background: #415d66;
+	background: #4b2e83;
 	border: none;
-	border-radius: 4px;
 	font-family: Georgia;
 	font-size: 14pt;
 	height: 60px;
@@ -27,25 +63,43 @@ button {
 button.reveal {
 	position: absolute;
 	bottom: 5%;
-	left: 5%;
+	right: 5%;
+}
+
+div.gui button.showProvided {
+	height: 80px;
+	width: 30%;
+	margin: -20% 3% 5% 3%;
+	display: inline-block;
+	float: none;
+	color: white;
+	background: #660000; 
 }
 
 button:hover {
 	color: white;
-	background: red;
+	background: green;
 	cursor: pointer;
 }
 
-input.sage {
-	position: absolute;
-	bottom: 15%;
-	right: 5%;
+div.gui button.showProvided:hover {
+	color: #660000;
+	background: white; 
 }
+
 
 button.check_answer {
 	position: absolute;
 	bottom: 5%;
-	right: 5%;
+	left: 5%;
+}
+
+button.gui {
+	width: 100px;
+	height: 50px;
+	display: inline;
+	margin: 0 0 2% 1%;
+	font-size: 16pt;
 }
 
 div.answer {
@@ -53,11 +107,68 @@ div.answer {
 	padding: 15% 0;
 }
 
+div.gui {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin: 5% auto 20% auto;
+	padding-bottom: 5%;
+	overflow: auto;
+	border-radius: 20px;
+}
+
+div.answerContainer {
+	min-height: 225px;
+	width: 90%;
+	margin: 5% auto 3% auto;
+	box-shadow: 0 0 10px 2px #e0e0e0;
+	border-radius: 20px;
+}
+
+div.buildAnswer {
+	font-size: 25pt;
+	padding: 5% 0;
+}
+
+div.buildAnswer p {
+	display: inline-block;
+	contentEditable: true;
+}
+
+div.buildAnswer hr {
+	width: 75%;
+}
+
+div.buttons {
+	width: 90%;
+	margin: 0 auto;
+}
+
+div.gui button.submit, div.gui button.clear {
+	display: inline-block;
+	margin: 0 5% 4% 0;
+	height: 80px;
+	width: 25%;
+	font-size: 20pt;
+	float: right;
+}
+
+div.gui button.submit {
+	clear: right;
+}
+
+div.inputs {
+	width: 60%;
+	height: 100%;
+	padding: 0;
+	margin-left: 5%;
+	float: left;
+}
+
 #pi {
-	background-color: #233237;
 	position: fixed;
-	top: 0;
-	left: 0;
+	top: 4%;
+	left: 3%;
 	width: 10%;
 	color: white;
 	font-size: 35pt;
@@ -66,18 +177,20 @@ div.answer {
 }
 
 #home {
-	color: #415d66;
-	background: #233237;
+	color: #545454;
+	background: none;
 	width: 100%;
-	font-size: 14pt;
-	font-family: Georgia;
 	margin: 0;
 	padding: 0;
 	border-radius: 0;
+	font-size: 14pt;
 	height: 100%;
+	-webkit-transition: all, 0.16s;
+	-moz-transition: all, 0.16s;
+	transition: all, 0.16s;
 }
 
-#home:hover {
+#pi:hover, #home:hover {
 	color: white;
 }
 
@@ -95,18 +208,19 @@ body {
 }
 
 #content {
-	margin-top: 10%;
+	margin-top: 5%;
 }
 
 #heading {
-	background-color: #233237;
+	background: #f1f1f1;
 	position: fixed;
 	top: 0;
-	left: 10%;
+	left: 15%;
 	text-align: left;
-	width: 98%;
+	width: 82%;
 	height: 10%;
 	z-index: 1;
+	border-bottom: solid 2px #909090;
 }
 
 #heading h2, #heading h3 {
@@ -120,14 +234,14 @@ body {
 }
 
 #heading h2 {
+	color: #606060;
 	font-family: Georgia;
 	font-weight: normal;
-	color: white;
 }
 
 #testname {
 	font-family: "CMU serif";
-	color: #415d66;
+	color: rgba(170, 170, 170, 0.5);
 	padding-left: .5em;
 }
 
@@ -141,26 +255,61 @@ body {
 
 #menu {
 	position: fixed;
-	top: 15%;
+	top: 20%;
 	left: 0;
-	width: 16%;
-	height: 100%;
+	width: 15%;
+	height: 40%;
+}
+
+
+#menu ul {
+	height: 90%;
+	margin-right: 15%;
+	padding: 0 5% 0 0;
+	border-right: solid 2px #909090;
+}
+
+#menu li {
+	float: right;
+	clear: both;
+}
+
+.hyphen, .selectedHyphen {
+	cursor: pointer;
+	font-size: 20pt;
+	height: .4em;
+	margin-bottom: 0.2em;
+	-webkit-transition: all, 0.12s;
+	-moz-transition: all, 0.12s;
+	transition: all, 0.12s;
+}
+
+.hyphen {
+	background: #879499;
+	width: 2em;
+}
+
+.selectedHyphen {
+	background: #616e72;
+	width: 3.7em;
 }
 
 #menu h2 {
-	color: white;
-	font-family: Georgia;
-	font-weight: normal;
+	font-family: 'Bree serif';
+	color: #616e72;
+	font-size: 22pt;
+	margin-left: 1.25em;
 }
 
 #menu li {
 	color: #879499;
 	cursor: pointer;
 	font-family: Georgia, "CMU serif", Verdana, sans-serif;
-	font-weight: normal;
-	font-size: 16pt;
+	font-weight: 900;
+	font-size: 20pt;
 	list-style-type: none;
-	margin-bottom: 10%;
+	line-height: .25em;
+	margin: 0;
 	text-align: center;
 	-webkit-transition: color, 0.12s;
 	-moz-transition: color, 0.12s;
@@ -176,12 +325,11 @@ body {
 	font-weight: lighter;
 	color: #303030;
 	position: relative;
-	width: 82%;
-	margin-right: 2%;
+	width: 80%;
+	margin-right: 4%;
 	padding-bottom: 10%;
 	height: 100%;
-	min-height: 100vh;
-	font-size: 16pt;
+	font-size: 14pt;
 	white-space: pre-wrap;
 }
 
@@ -194,11 +342,20 @@ body {
 }
 
 #problems > div {
-	background-color: white;
+/*	background-color: white;*/
 	position: relative;
 	width: 90%;
-	padding: 7% 5%;
+	padding: 7% 5% 15% 5%;
 	margin: 3% 0;
-	box-shadow: 0px 0px 2px 2px rgba(150, 150, 150, 0.4);
-	min-height: 60vh;
+/*	box-shadow: 0px 0px 2px 2px rgba(150, 150, 150, 0.4);*/
+	border-bottom: solid 1px #7a7a7a;
+	min-height: 37vh;
+	overflow: auto;
+}
+
+#problems img {
+	text-align: center;
+	height: 300px;
+	width: auto;
+	margin: 3% auto 10% auto;
 }

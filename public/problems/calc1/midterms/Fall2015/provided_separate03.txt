@@ -1,0 +1,1 @@
+10 \cdot \frac{sin 5}{cos 5}

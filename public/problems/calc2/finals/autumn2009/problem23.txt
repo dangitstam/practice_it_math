@@ -1,0 +1,10 @@
+11. (10 points) The swine flu epidemic has been modelled by the Gompertz function, which is a solution of 
+the differential equation
+				$$ \frac{dy}{dt} = 1.2 \; y \, \left( K - \ln(y) \right), $$
+where $y(t)$ is the number of individuals (in thousands) in a large city that have been infected by time $t$, 
+and $K$ is a constant. Time $t$ is measured in months, with $t=0$ on July 9, 2009.
+
+On July 9, 2009, 75 thousand individuals had been infected. One month later, 190 thousand individuals had been infected.
+Find
+				$$\lim_{t\to\infty} y(t),$$
+which is the total number of individuals (in thousands) that will have been infected.

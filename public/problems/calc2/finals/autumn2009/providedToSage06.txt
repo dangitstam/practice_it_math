@@ -1,0 +1,3 @@
+var('t T')
+t = T
+print bool(.4 > abs((49/3) -

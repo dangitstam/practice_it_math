@@ -1,0 +1,1 @@
+\frac{1 - 2x}{2\sqrt{x}e^x}

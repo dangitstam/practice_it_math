@@ -1,0 +1,2 @@
+8. (d) (2 points) Use your calculator to evaluate your answers in part (a) as a SIMPSON decimal;
+round your answer to six decimal digits after the decimal point.

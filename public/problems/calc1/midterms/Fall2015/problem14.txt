@@ -1,0 +1,2 @@
+4. Calculate the derivatives of the following functions:
+	(a) (5 points) $$ f(x) = x^(\sqrt{2}) + \sqrt{2} \cdot x^2 + \pi $$

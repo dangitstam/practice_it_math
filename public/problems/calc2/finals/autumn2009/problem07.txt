@@ -1,0 +1,1 @@
+3. (c) (3 points) The balloon hits the ground at time $t = 6$ sec. What was its initial height above the ground at time $t = 0$ in ft?

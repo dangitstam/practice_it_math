@@ -1,0 +1,1 @@
+print (bool(integral((((ln(x))/(x^3)) - sin((pi*x))) ,x,1,2) ==

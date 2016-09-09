@@ -1,0 +1,1 @@
+1. (c) (5 points) $$ \lim_{x\to 1} \frac{(x^2 - 25)\cdot sin\,x}{(x - 5)\cdot cos\,x} = $$

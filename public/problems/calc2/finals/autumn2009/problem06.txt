@@ -1,0 +1,1 @@
+3. (b) (4 points) Find the total distance traveled by the balloon from time t = 0 sec to time t = 3 sec.

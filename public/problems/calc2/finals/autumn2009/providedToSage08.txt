@@ -1,0 +1,1 @@
+print (bool(integral(2*(pi*(x + 2))*(e^x - 1 - x^2) ,x,0,1) ==

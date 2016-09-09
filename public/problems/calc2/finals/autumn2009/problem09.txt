@@ -1,0 +1,3 @@
+4. (b) (4 points) Set up an integral (or integrals) for the volume of this solid using WASHERS. 
+
+DO NOT EVALUATE THE INTEGRAL(S).

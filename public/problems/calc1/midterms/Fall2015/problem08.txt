@@ -1,0 +1,4 @@
+3. Below is the graph of a function $y = f(x)$. Compute (no justification necessary): (If a
+limit does not exist enter DNE)
+
+	(a) (3 points) $ \lim_{x \to 0} \, f(x) = $

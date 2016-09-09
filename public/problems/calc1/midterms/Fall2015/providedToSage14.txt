@@ -1,0 +1,1 @@
+print (bool(sqrt(2) * x^(sqrt(2) - 1) + 2*sqrt(2)*x^2 + pi == 

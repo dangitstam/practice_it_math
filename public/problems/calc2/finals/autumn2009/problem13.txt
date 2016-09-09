@@ -1,0 +1,7 @@
+7. (8 total points) The electric force (in Newtons) acting on a charged particle $A$ as a result of the presence of a second charged particle $B$ is given by Coulomb's Law:
+		$$F=\frac{k \, q_A \, q_B}{r^2},$$
+where $r$ is the distance (in meters) between the particles, $q_A$ and $q_B$ are the charges of $A$ and $B$ in Coulombs, and $k=9 \times 10^9$ is a constant.
+
+Assume that two particles $A$ and $B$ have opposite charges, with $q_A=1$ Coulomb and $q_B=-1$ Coulomb.  (The force $F$ is negative, indicating that the particles are attracting each other.)  Assume that particle $A$ is kept fixed, and that the initial distance between the two particles is $1$ meter.
+
+(a) (4 points) Find the work done to move particle $B$ from its initial position to a position $2$ meters away from particle $A$ in joules (use asteriks for multiplication and exclude the units).

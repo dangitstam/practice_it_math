@@ -1,0 +1,3 @@
+6. (8 points) At each time $t \ge 0$, ${\cal R}_t$ is the region above the $x$-axis, below the curve $y=e^{-x^2}$, with left side on the line $x=-t^2$ and right side on the line $x=t^3$ (see the figure).
+
+	Let $A(t)$ be the area of ${\cal R}_t$.  Find $\frac{dA}{dt}$ at time $t=1$.

@@ -1,0 +1,7 @@
+2. (c) (5 points) Find all values of the parameter $c$, if any, such that the function 
+$$
+g(x) = \left\{\begin{aligned}
+&x^2sin(\frac{1}{x}) + 3, && if\ \ x \neq 0, \\
+&c, && if\ \ x = 0
+\end{aligned}
+\right.$$ is differentiable at 0.

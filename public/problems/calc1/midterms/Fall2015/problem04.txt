@@ -1,0 +1,1 @@
+1. (d) (5 points) $$ \lim_{x\to 0} \frac{x}{\sqrt{x + 4} - 2} = $$

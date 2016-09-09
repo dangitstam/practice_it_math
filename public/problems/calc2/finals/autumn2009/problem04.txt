@@ -1,0 +1,1 @@
+2. (b) (6 points) $${\int {\frac{x + 1}{x^3 + x^2 - 6x}} dx}$$

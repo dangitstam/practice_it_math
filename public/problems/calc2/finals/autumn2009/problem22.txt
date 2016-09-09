@@ -1,0 +1,3 @@
+10. (8 points) Find the solution of the differential equation
+				$$ \frac{dy}{dx} = x e^{x+y} $$
+                 which satisfies the initial condition $y(0) = 1$.

@@ -1,0 +1,7 @@
+8. (10 total points) 
+
+	(a) (4 points) Use Simpson's rule with $n=4$ subintervals to approximate the integral
+				$$\int_1^3 \ln \, x \; dx.$$
+			Give your answer in EXACT form (involving numbers like $\ln(3)$, etc.).
+
+	DO NOT GIVE A DECIMAL APPROXIMATION in this part.

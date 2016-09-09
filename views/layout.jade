@@ -2,65 +2,88 @@ doctype html
 html
 head
 	title Practice-it: Math
-	link(rel="stylesheet", href="/stylesheets/mathdesign.css")
-	script(src="/javascripts/math.js")
-	script(async, src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML")
+	link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Bree+Serif") 
+	link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Khula:300")
+	link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lora:700")
+	link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Exo:400,900")
+	link(rel="stylesheet", href="/stylesheets/landing.css")
+	link(rel="stylesheet", href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css")
+	script(src="/javascripts/landing.js")
+	script(async, src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML").
+		MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true }})
 	body
-		#contentwrapper
-			#head
-				#headBackgroundFourier $$  f(x) = \frac{1}{2} a_{0} + \sum_{n=1}^{\infty} a_{n}\cos(nx) $$
-				#headBackgroundLagrange
-					span#bn $$+ \sum_{n=0}^{\infty} b_{n}\sin(nx) $$
-				#menu #[span Courses] / #[span About us] / #[span UW Math Department]
-				#mathtitle
-					h1 PRACTICE-IT: MATH
-					h3 Practice-it makes perfect
-				#login
-					form(method="post")#loginform
-						input(type="submit", value="Log in")
-					form(method="post")#createAcc
-						input(type="submit", value="Create an account")
-				#scroll
-					p ^
-			#triangledown
-			#courseswrapper
-				#courses
-					each currShort, i in classShort
-						- var className_1 = courses[i][0].toUpperCase();
-						- var className_2 = courses[i][1].toUpperCase();;
-						- var classNumber = courses[i][2];
-						- var descibe = descriptions[i];
-						- var mid = midterms[currShort];
-						- var fin = finals[currShort];
-						div(class="#{currShort}")
-							div(class="#{currShort}")
-								h2 
-									| #{className_1}
-									br
-									| #{className_2}
-								h3 #{classNumber}
-								p.description #{descibe}
-								div.form
-									h4 Midterms
-									select(form="#{currShort}m", name="exam")
-										each m, i in mid
-											option(value="#{currShort} " + "#{m}" + " midterm") #{m}
+		#head.fadeIn
+			#headBackgroundFourier1 $$  f(x) = \frac{1}{2} a_{0} + \sum_{n=1}^{\infty} a_{n}\cos(nx) $$
+			#headBackgroundFourier2 $$ + \sum_{n=0}^{\infty} b_{n}\sin(nx) $$
+			#headBackgroundLagrange $$ \sum_{k=0}^{\infty} \frac{x^k}{k!} $$
+			#mathtitle
+				//- #menu #[span Courses] / #[span About us] / #[span UW Math Department]
+				h1 Practice it: #[span MATH]
+				h3 "Practice-it makes perfect."
+				p
+					| Hone your mathematical skills by completing 
+					br
+					| past exams previously given at the 
+				img(src="images/Wordmark_center_Purple_Hex.png", alt="University of Washington")
+		#content
+			#menu
+				h2 COURSES
+				ul#selectCourse
+					each course, i in classShort
+						li(class="#{course}")
+							div.selectedHyphen
+			#courses
+				each currShort, i in classShort
+					- var className_1 = courses[i][0];
+					- var className_2 = courses[i][1];
+					- var classNumber = courses[i][2];
+					- var descibe = descriptions[i];
+					- var mid = midterms[currShort];
+					- var fin = finals[currShort];
+					- var fullName = className_1 + " " + className_2;
+					- var background = math_backgrounds[i];
+					div(class="#{currShort} course")
+						div.titles
+							h2
+								| #{className_1.toUpperCase()}
+								br
+								| #{className_2.toUpperCase()}
+							h3 #{classNumber}
+							div.titleHyphen
+						div.description #{descibe}
+						div.background #{background}
+						div.formContain
+							div.form
+								h4 Midterms
+								select(form="#{currShort}m", name="exam")
+									each m, i in mid
+										option(value="#{currShort} " + "#{m}" + " midterm") #{m}
+								div.inputWrap
 									form(id="#{currShort}m", method="POST", action="/problems")
 										input(value="START", type="submit")
-								div.form
-									h4 Finals
-									select(form="#{currShort}f", name="exam")
-										each f, i in fin
-											option(value="#{currShort} " + "#{f}" + " midterm") #{f}
+									p >
+							div.form
+								h4 Finals
+								select(form="#{currShort}f", name="exam")
+									each f, i in fin
+										option(value="#{currShort} " + "#{f}" + " final") #{f}
+								div.inputWrap
 									form(id="#{currShort}f", method="POST", action="/problems")
 										input(value="START", type="submit")
-				#contactwrapper
-					#triangleup
-					#contact
-		#mathBackground.fadeIn.fadeInDisplay
-			- for (var i = 0; i < math_backgrounds.length; i++) {
-				- var currShort = classShort[i];
-				- var currBackground = math_backgrounds[i];
-			div(class="#{currShort}")
-				p #{currBackground}
-			- }
+									p >
+		#about
+			a(href="https://www.facebook.com/tam.dang.33")
+				i(class="fa fa-facebook-official", style="font-size:48px;")
+			a(href="https://twitter.com/dangitstam")
+				i(class="fa fa-twitter", style="font-size:48px;")
+			h2 #[span Tam Dang]
+			h3 Primary Developer
+			h4 dangt7@uw.edu
+			h4 206.370.2981
+		//- menuItemOne.trigger('click');
+		//- alert(menuItemOne.innerHTML);
+		//- #mathBackground.fadeIn
+		//- 	each currShort, i in classShort
+		//- 		- var currBackground = math_backgrounds[i];
+		//- 		div(class="#{currShort}")
+		//- 			p #{currBackground}

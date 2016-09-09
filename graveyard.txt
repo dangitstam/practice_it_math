@@ -1,0 +1,49 @@
+	function refreshMath(addContent, answerDiv) {
+
+		alert(addContent);
+		var build = answerDiv.querySelector(".buildAnswer");
+		console.log(build);
+		var prevContent = combineCurrentContent(build);
+		var currentAnswer = answerDiv.querySelector(".currentAnswer");
+
+		var script = currentAnswer.querySelector("script");
+		var scriptContent = "";
+		if (script) {
+			scriptContent = script.innerHTML;
+		}
+
+		if (prevContent.length > 0) {
+			currentAnswer.innerHTML = "$" + scriptContent + "{" + prevContent + "}$";
+		}
+
+		// addContent can either be a paragraph or raw input
+		if (addContent.tagName) {
+			build.innerHTML = "";
+			build.appendChild(addContent);
+		} else {
+			build.innerHTML = addContent;
+		}
+
+		currEditing = false;
+		started = true;
+		MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+
+			// var p_edit = document.createElement("p");
+			// p_edit.contentEditable = true;
+			// p_edit.innerHTML = "(integrand)";
+			// p_edit.classList.add("raw");
+			// p_edit.classList.add("edit"); // WORKS! allows for insertion during a current block
+
+			// // On enter, solidify currently build answer and allow for
+			// // editing after solidified block.
+			// p_edit.addEventListener("keyup", function(event) {
+			// 	if (event.keyCode == 13) {
+			// 		event.preventDefault(); // prevent carriage return
+			// 		var buildAnswer = this.parentNode;
+			// 		var combinedContent = combineCurrentContent(buildAnswer);
+			// 		alert(combinedContent);
+			// 		buildAnswer.innerHTML = "$" + combinedContent + "$";
+			// 		MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+			// 		currEditing = false;
+			// 	}
+			// });

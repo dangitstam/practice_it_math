@@ -1,0 +1,2 @@
+$$ \lim_{x\to+\infty} \frac{x^10(3 + \frac{1}{x^2} + \frac{3}{x^10})}{x^10(1 - \frac{3}{x^4} + \frac{2}{x^10})} = $$
+$$ \lim_{x\to+\infty} \frac{3 + \frac{1}{x^2} + \frac{3}{x^10}}{1 - \frac{3}{x^4} + \frac{2}{x^10}} = 3 $$

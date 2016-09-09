@@ -1,0 +1,1 @@
+7. (b) (4 points) Find the work done to move particle $B$ from its initial position to an infinite distance away from particle $A$ in joules (use asteriks for multiplication and exclude the units).

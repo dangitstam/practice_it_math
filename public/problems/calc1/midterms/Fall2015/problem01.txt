@@ -1,0 +1,3 @@
+1. Calculate the following limits.  If the limit does not exist enter DNE. Make sure to show all steps.
+
+	(a) (5 points)	$$ \lim_{x\to+\infty} \frac{3x^{10} + x^8 + 3}{x^{10} - 3x^6 + 2} = $$

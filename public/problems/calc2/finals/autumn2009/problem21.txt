@@ -1,0 +1,1 @@
+9. (c) (4 points) Find the $y$-coordinate $\overline{y}$ of the centroid (center of mass) of ${\cal R}$.

@@ -19,30 +19,6 @@
 		document.body.onscroll = changeMath;
 	}
 
-	function startScroll() {
-		var value;
-		if (this.id == "scrollUp") {
-			value = 20;
-		} else {
-			value = -20;
-		}
-		if (!scrolling) {
-			scrolling = setInterval(scrollMenu, 10, value);
-		}
-	}
-
-	function stopScroll() {
-		if (scrolling) {
-			clearInterval(scrolling);
-			scrolling = null;
-		}
-	}
-
-	function scrollMenu(value) {
-		var menu = document.getElementById("menu");
-		menu.scrollTop += value;
-	}
-
     function changeMath() {
 		for (var i = 0; i < classTitles.length; i++) {
 			var currClass = classTitles[i];
@@ -69,5 +45,6 @@
 		reveal.style.display = "";
 		mathBackDiv.classList.remove("fadeOut");
 	}
+
 
 })();

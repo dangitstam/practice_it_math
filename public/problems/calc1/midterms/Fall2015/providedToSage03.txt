@@ -1,0 +1,1 @@
+print (bool(10*sin(5)/cos(5) ==

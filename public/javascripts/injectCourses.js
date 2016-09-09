@@ -45,7 +45,7 @@ function loadCourseInfo() {
 	var courses = [];
 	var descriptions = [];
 	var math_backgrounds = [];
-	var sql = "SELECT title, description, background FROM courses ORDER BY id";
+	var sql = "SELECT title, description, background FROM courses";
 	var query = connection.query(sql, function (err, rows, result) {
 		if (err) {
 			console.log(err);
@@ -76,7 +76,7 @@ function loadExams(type, course_materials) {
 	for (var i = 0; i < classShort.length; i++) {
 		exams[classShort[i]] = [];
 	}
-	/* Collects all midterm exams unique by subject and name */
+	/* Collects all exams unique by subject and name */
 	var sql = "SELECT `subject`, `test_name` FROM problems WHERE `test_type` = '" + type + "' GROUP BY `subject`, `test_name`;";
 	var query = connection.query(sql, function (err, rows, result) {
 		if (err) {

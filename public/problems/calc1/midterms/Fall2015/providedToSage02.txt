@@ -1,0 +1,8 @@
+DNE = 0
+dne = DNE
+Dne = DNE
+dNe = DNE
+dnE = DNE
+DNe = DNE
+dNE = DNE
+print (bool(DNE == 

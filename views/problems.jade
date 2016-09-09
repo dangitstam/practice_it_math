@@ -3,12 +3,22 @@ html
 head
 	title Practice-it: Math
 	link(rel="stylesheet", href="/stylesheets/problemdesign.css")
+	link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Bree+Serif") 
 	script(src="/javascripts/problem.js")
 	script(async, src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML").
-		MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true }})
+		MathJax.Hub.Config({ 
+			tex2jax: { 
+				inlineMath: [['$','$'], ['\\(','\\)']], 
+				processEscapes: true 
+			},
+			extensions: ["http://cs.jsu.edu/mathjax-ext/contrib/forminput/forminput.js"],
+			CommonHTML: { linebreaks: { automatic: true } },
+			"HTML-CSS": { linebreaks: { automatic: true } },
+			SVG: { linebreaks: { automatic: true } }
+		});
 	body
 		#pi
-			button#home Back to Courses
+			button#home $ \vec{v} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} $
 		#heading
 			- var test_heading = test_name + " " + test_type;
 			h2 #{subject} 
@@ -16,18 +26,42 @@ head
 
 		#content
 			#menu
+				h2 Problems
 				ul#selectproblem
-					- for (var i = 0; i < rows.length; i++) {
-					li(class="menu#{i}") Problem #{i + 1}
-					- }
+					each row, i in rows
+						li(class="menu#{i}")
+							div.hyphen
 			#problems
 				each question, i in rows
-					- console.log(question);
 					div(class="problemContain#{i}")
 						div(class="problem#{i}") #{question["problem"]}
-						div(id="#{i}").answer
+						- if (images !== "" && (typeof images[i + '.jpeg'] !== 'undefined')) {
+						img(src="data:image/png;base64,#{images[i + '.jpeg']}")
+						- }
+						div(class="answer #{i}")
 							h3 Solution
 							p #{question["solution"]}
-						input(name="sage", type="text", maxlength="50", id="sage#{i}").sage
-						button(class="check_answer #{i}") Check Answer
-						button.reveal Reveal Solution 
+						button(class="check_answer #{i}") Attempt an Answer
+						button.reveal Reveal Solution
+						div(class="gui #{i}")
+							div.answerContainer
+								div.buildAnswer 
+									p(class="raw edit", contentEditable="true") (Build your answer here)
+							div.buttons
+								button(class="clear #{i}") Clear
+								div.inputs
+									button.integ.gui Def. $\int$
+									button.integIndef.gui Indef. $\int$
+									button.frac.gui $\frac{frac}{tion}$
+									button.square.gui $base^{exp}$
+									button.sqrt.gui $\sqrt a$
+									button.inv_exp.gui $\sqrt[n]a$
+									button.log.gui $\log_{n} {N}$
+									button.pi.gui $\pi$
+									button.sin.gui $\sin(x)$
+									button.cos.gui $\cos(x)$
+									button.tan.gui $\tan(x)$
+									button.arcsin.gui $\arcsin(x)$
+									button.arccos.gui $\arccos(x)$
+									button.arctan.gui $\arctan(x)$ 
+								button(class="submit #{i}") Submit

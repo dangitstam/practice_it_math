@@ -1,0 +1,8 @@
+2. Given the function
+$$
+f(x) = \left\{\begin{aligned}
+&x^2sin(\frac{1}{x}) + 3, && if\ \ x \neq 0, \\
+&1, && if\ \ x = 0
+\end{aligned}
+\right.$$
+	(a) (5 points) Calculate $ \lim_{x\to 0} \, f(x)$. Make sure to show all steps (lol there's no way to enforce that). 

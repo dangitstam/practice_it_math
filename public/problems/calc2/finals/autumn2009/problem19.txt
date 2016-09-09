@@ -1,0 +1,3 @@
+9. (10 total points) Consider the region ${\cal R}$ bounded between the curves $y=5-x^{2}$ and $y=4x^{2}$.
+
+	(a) (3 points) Find the area of ${\cal R}$.
